@@ -2,7 +2,7 @@ const { body, validationResult } = require('express-validator');
 const validate = {};
 
 validate.bookRules = () => {
-    return [
+  return [
         body('title')
             .trim()
             .isString()
@@ -15,7 +15,7 @@ validate.bookRules = () => {
 
         body('isbn')
             .notEmpty(),
-        
+
         body('rating')
             .trim()
             .isString()
@@ -29,19 +29,19 @@ validate.bookRules = () => {
 };
 
 validate.bookValidation = async (req, res, next) => {
-    let errors = [];
-    errors = validationResult(req);
+  let errors = [];
+  errors = validationResult(req);
 
-    if (errors.isEmpty()) {
-        return next();
-    }
+  if (errors.isEmpty()) {
+    return next();
+  }
 
-    const extractedErrors = []
-    errors.array().map(err => extractedErrors.push({ [err.param]: err.msg }))
+  const extractedErrors = [];
+  errors.array().map((err) => extractedErrors.push({ [err.param]: err.msg }));
 
-    return res.status(422).json({
-        errors: extractedErrors,
-    })
+  return res.status(422).json({
+    errors: extractedErrors
+  });
 };
 
 module.exports = validate;
