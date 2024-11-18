@@ -18,8 +18,17 @@ app.use((req, res, next) => {
     next();
 });
 
- /* ***************
-* LOCAL SERVER INFORMATION 
+
+/* ***************
+* ERROR HANDLING
+*************** */
+process.on('uncaughtException', (err, origin) => {
+    console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+});
+
+
+/* ***************
+* LOCAL SERVER & DATABASE INFORMATION 
 *************** */
 const port = process.env.PORT || 8080;
 

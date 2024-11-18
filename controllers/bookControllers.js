@@ -27,8 +27,8 @@ const createBook = async (req, res) => {
     const book = {
         "title": req.body.title,
         "author": req.body.author,
-        "ISBN": {
-            "$numberLong": req.body.ISBN
+        "isbn": {
+            "$numberLong": req.body.isbn
         },
         "rating": req.body.rating,
         "owned": req.body.owned
@@ -51,8 +51,8 @@ const updateBook = async (req, res) => {
     const book = {
         "title": req.body.title,
         "author": req.body.author,
-        "ISBN": {
-            "$numberLong": req.body.ISBN
+        "isbn": {
+            "$numberLong": req.body.isbn
         },
         "rating": req.body.rating,
         "owned": req.body.owned
