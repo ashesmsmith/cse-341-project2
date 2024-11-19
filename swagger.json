@@ -5,7 +5,7 @@
     "description": "Temple API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse-341-project2-ij3n.onrender.com",
   "basePath": "/",
   "schemes": ["http"],
   "paths": {
