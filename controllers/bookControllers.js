@@ -37,7 +37,7 @@ const createBook = async (req, res) => {
   const response = await mongodb.getDatabase().db().collection('books').insertOne(book);
 
   if (response.acknowledged) {
-    res.status(204).send();
+    res.status(204).json(response);
   } else {
     res.status(500).json(response.error) || 'An error occurred while adding the book.';
   }
