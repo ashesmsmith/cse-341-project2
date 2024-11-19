@@ -1,6 +1,4 @@
-//*************** 
 // LOCALHOST
-//***************
 
 ### GET - Display Homepage
 GET http://localhost:8080/
@@ -43,3 +41,48 @@ Content-Type: application/json
 ### DELETE - Delete Book
 ### When testing add Delete Me book above first then update id in URL below
 DELETE http://localhost:8080/books/673ba222b6f16219db471f1a HTTP/1.1
+
+
+// PRODUCTION
+
+### GET - Display Homepage
+GET https://cse-341-project2-ij3n.onrender.com
+
+### GET - Display All Books
+GET https://cse-341-project2-ij3n.onrender.com/books
+
+### GET - Display Book by Id (A Court of Thorns and Roses)
+GET https://cse-341-project2-ij3n.onrender.com/books/673b9f853c0842bc19377cb9
+
+### POST - Create Book
+POST https://cse-341-project2-ij3n.onrender.com/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Delete Me",
+    "author": "Testing",
+    "isbn": {
+        "$numberLong": "0123456789"
+    },
+    "rating": 1,
+    "owned": "No"
+}
+
+### PUT - Update Book
+### When testing add Delete Me book above first then update id in URL below
+PUT https://cse-341-project2-ij3n.onrender.com/books/673cd3c6e7713851fb9afe5e HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Still Delete Me",
+    "author": "Still Testing",
+    "isbn": {
+        "$numberLong": "9876543210"
+    },
+    "rating": 5,
+    "owned": "Yes"
+}
+
+### DELETE - Delete Book
+### When testing add Delete Me book above first then update id in URL below
+DELETE https://cse-341-project2-ij3n.onrender.com/books/673cd3c6e7713851fb9afe5e HTTP/1.1
