@@ -27,11 +27,11 @@ const createBook = async (req, res) => {
   const book = {
     title: req.body.title,
     author: req.body.author,
-    isbn: {
-      $numberLong: req.body.isbn
-    },
-    rating: req.body.rating,
-    owned: req.body.owned
+    isbn: req.body.isbn,
+    format: req.body.format,
+    pages: req.body.pages,
+    firstPublished: req.body.firstPublished,
+    genre: req.body.genre
   };
 
   const response = await mongodb.getDatabase().db().collection('books').insertOne(book);
@@ -50,11 +50,11 @@ const updateBook = async (req, res) => {
   const book = {
     title: req.body.title,
     author: req.body.author,
-    isbn: {
-      $numberLong: req.body.isbn
-    },
-    rating: req.body.rating,
-    owned: req.body.owned
+    isbn: req.body.isbn,
+    format: req.body.format,
+    pages: req.body.pages,
+    firstPublished: req.body.firstPublished,
+    genre: req.body.genre
   };
 
   const response = await mongodb

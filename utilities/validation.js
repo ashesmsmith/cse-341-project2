@@ -3,29 +3,20 @@ const validate = {};
 
 validate.bookRules = () => {
   return [
-        body('title')
-            .trim()
-            .isString()
-            .notEmpty(),
+    body('title').trim().isString().notEmpty(),
 
-        body('author')
-            .trim()
-            .isString()
-            .notEmpty(),
+    body('author').trim().isString().notEmpty(),
 
-        body('isbn')
-            .notEmpty(),
+    body('isbn').notEmpty(),
 
-        body('rating')
-            .trim()
-            .isString()
-            .notEmpty(),
+    body('format').trim().isString().notEmpty(),
 
-        body('owned')
-            .trim()
-            .isString()
-            .notEmpty()
-    ]
+    body('pages').trim().notEmpty(),
+
+    body('firstPublished').trim().notEmpty(),
+
+    body('genre').trim().isString().notEmpty()
+  ];
 };
 
 validate.bookValidation = async (req, res, next) => {
