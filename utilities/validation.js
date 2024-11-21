@@ -15,7 +15,7 @@ validate.bookRules = () => {
 
     body('firstPublished').trim().notEmpty(),
 
-    body('genre').trim().isString().notEmpty()
+    body('genre').trim().notEmpty()
   ];
 };
 

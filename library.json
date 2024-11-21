@@ -5,8 +5,10 @@
     "isbn": "9781635575613",
     "format": "hardcover",
     "pages": 232,
-    "firstPublished": 2018,
-    "genre": ["fiction", "fantasy", "romance"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 3,
+    "owned": "Yes"
   },
   {
     "title": "A Court of Mist and Fury",
@@ -14,8 +16,10 @@
     "isbn": "9781635575576",
     "format": "hardcover",
     "pages": 626,
-    "firstPublished": 2016,
-    "genre": ["fiction", "fantasy", "romance"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 5,
+    "owned": "Yes"
   },
   {
     "title": "A Court of Silver Flames",
@@ -23,8 +27,10 @@
     "isbn": "9781681196282",
     "format": "hardcover",
     "pages": 751,
-    "firstPublished": 2021,
-    "genre": ["fiction", "fantasy", "romance"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4,
+    "owned": "Yes"
   },
   {
     "title": "A Court of Thorns and Roses",
@@ -32,8 +38,10 @@
     "isbn": "9781635575552",
     "format": "hardcover",
     "pages": 419,
-    "firstPublished": 2015,
-    "genre": ["fiction", "fantasy", "romance"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4,
+    "owned": "Yes"
   },
   {
     "title": "A Court of Wings and Ruin",
@@ -41,8 +49,10 @@
     "isbn": "9781635575590",
     "format": "hardcover",
     "pages": 703,
-    "firstPublished": 2017,
-    "genre": ["fiction", "fantasy", "romance"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 5,
+    "owned": "Yes"
   },
   {
     "title": "Crown of Midnight",
@@ -50,8 +60,10 @@
     "isbn": "9781639730964",
     "format": "hardcover",
     "pages": 420,
-    "firstPublished": 2013,
-    "genre": ["fiction", "fantasy"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4.5,
+    "owned": "Yes"
   },
   {
     "title": "Empire of Storms",
@@ -59,8 +71,10 @@
     "isbn": "9781639731022",
     "format": "hardcover",
     "pages": 693,
-    "firstPublished": 2016,
-    "genre": ["fiction", "fantasy"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4.5,
+    "owned": "Yes"
   },
   {
     "title": "Heir of Fire",
@@ -68,8 +82,10 @@
     "isbn": "9781639730988",
     "format": "hardcover",
     "pages": 565,
-    "firstPublished": 2014,
-    "genre": ["fiction", "fantasy"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4,
+    "owned": "Yes"
   },
   {
     "title": "House of Earth and Blood",
@@ -77,8 +93,10 @@
     "isbn": "9781635574043",
     "format": "hardcover",
     "pages": 800,
-    "firstPublished": 2020,
-    "genre": ["fiction", "fantasy", "romance"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 5,
+    "owned": "Yes"
   },
   {
     "title": "House of Flame and Shadow",
@@ -86,8 +104,10 @@
     "isbn": "9781635574104",
     "format": "hardcover",
     "pages": 838,
-    "firstPublished": 2024,
-    "genre": ["fiction", "fantasy", "romance"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4.5,
+    "owned": "Yes"
   },
   {
     "title": "House of Sky and Breath",
@@ -95,8 +115,10 @@
     "isbn": "9781635574074",
     "format": "hardcover",
     "pages": 805,
-    "firstPublished": 2022,
-    "genre": ["fiction", "fantasy", "romance"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4,
+    "owned": "Yes"
   },
   {
     "title": "Kingdom of Ash",
@@ -104,8 +126,10 @@
     "isbn": "9781639731060",
     "format": "hardcover",
     "pages": 984,
-    "firstPublished": 2018,
-    "genre": ["fiction", "fantasy"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 5,
+    "owned": "Yes"
   },
   {
     "title": "Queen of Shadows",
@@ -113,8 +137,10 @@
     "isbn": "9781639731008",
     "format": "hardcover",
     "pages": 648,
-    "firstPublished": 2015,
-    "genre": ["fiction", "fantasy"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4.5,
+    "owned": "Yes"
   },
   {
     "title": "The Assassin's Blade",
@@ -122,8 +148,10 @@
     "isbn": "9781639731084",
     "format": "hardcover",
     "pages": 435,
-    "firstPublished": 2014,
-    "genre": ["fiction", "fantasy"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4,
+    "owned": "Yes"
   },
   {
     "title": "Throne of Glass",
@@ -131,8 +159,10 @@
     "isbn": "9781639730940",
     "format": "hardcover",
     "pages": 406,
-    "firstPublished": 2012,
-    "genre": ["fiction", "fantasy"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4.5,
+    "owned": "Yes"
   },
   {
     "title": "Tower of Dawn",
@@ -140,7 +170,9 @@
     "isbn": "9781639731046",
     "format": "hardcover",
     "pages": 663,
-    "firstPublished": 2017,
-    "genre": ["fiction", "fantasy"]
+    "status": "read",
+    "read-count": 1,
+    "rating": 4,
+    "owned": "Yes"
   }
 ]
