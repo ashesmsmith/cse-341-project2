@@ -1,18 +1,15 @@
 const router = require('express').Router();
 const bookController = require('../controllers/bookControllers');
-const utilities = require('../utilities/index');
 const bookValidate = require('../utilities/validation');
 
 /* ***************
  * Display Book(s)
  *************** */
 // http://localhost:8080/books
-router.get('/', 
-  utilities.handleErrors(bookController.getAllBooks));
+router.get('/', bookController.getAllBooks);
 
 // http://localhost:8080/books/:id
-router.get('/:id', 
-  utilities.handleErrors(bookController.getBookById));
+router.get('/:id', bookController.getBookById);
 
 /* ***************
  * Create Book
@@ -20,8 +17,7 @@ router.get('/:id',
 router.post('/',
   bookValidate.bookRules(),
   bookValidate.bookValidation,
-  utilities.handleErrors(bookController.createBook)
-);
+  bookController.createBook);
 
 /* ***************
  * Update Book
@@ -29,13 +25,11 @@ router.post('/',
 router.put('/:id',
   bookValidate.bookRules(),
   bookValidate.bookValidation,
-  utilities.handleErrors(bookController.updateBook)
-);
+  bookController.updateBook);
 
 /* ***************
  * Delete Book
  *************** */
-router.delete('/:id', 
-  utilities.handleErrors(bookController.deleteBook));
+router.delete('/:id', bookController.deleteBook);
 
 module.exports = router;
