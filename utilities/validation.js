@@ -3,19 +3,42 @@ const validate = {};
 
 validate.bookRules = () => {
   return [
-    body('title').trim().isString().notEmpty().withMessage('Please enter a valid title.'),
+    body('title')
+      .trim()
+      .isString()
+      .notEmpty()
+      .withMessage('Please enter a valid title.'),
 
-    body('author').trim().isString().notEmpty().withMessage('Please enter a valid author.'),
+    body('author')
+      .trim()
+      .isString()
+      .notEmpty()
+      .withMessage('Please enter a valid author.'),
 
-    body('isbn').notEmpty().withMessage('Please enter a valid isbn.'),
+    body('isbn')
+      .notEmpty()
+      .withMessage('Please enter a valid isbn.'),
 
-    body('format').trim().isString().notEmpty().withMessage('Please enter a valid format.'),
+    body('format')
+      .trim()
+      .isString()
+      .notEmpty()
+      .withMessage('Please enter a valid format.'),
 
-    body('pages').trim().notEmpty().withMessage('Please enter a valid number of pages.'),
+    body('pages')
+      .trim()
+      .notEmpty()
+      .withMessage('Please enter a valid number of pages.'),
 
-    body('firstPublished').trim().notEmpty().withMessage('Please enter a valid first published date.'),
+    body('firstPublished')
+      .trim()
+      .notEmpty()
+      .withMessage('Please enter a valid first published date.'),
 
-    body('genre').trim().notEmpty().withMessage('Please enter a valid genre.')
+    body('genre')
+      .trim()
+      .notEmpty()
+      .withMessage('Please enter a valid genre.')
   ];
 };
 

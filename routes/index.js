@@ -1,8 +1,9 @@
 const router = require('express').Router();
+const swaggerRoutes = require('./swagger');
 const bookRoutes = require('./bookRoutes');
 
 // Swagger
-router.use('/', require('./swagger'));
+router.use('/', swaggerRoutes);
 
 // Home Page - http://localhost:8080/
 router.get('/', (req, res) => {

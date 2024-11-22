@@ -1,26 +1,41 @@
 const router = require('express').Router();
 const bookController = require('../controllers/bookControllers');
+const utilities = require('../utilities/index');
 const bookValidate = require('../utilities/validation');
 
-// Display Book(s)
-router.get('/', bookController.getAllBooks); // http://localhost:8080/books
-router.get('/:id', bookController.getBookById); // http://localhost:8080/books/:id
+/* ***************
+ * Display Book(s)
+ *************** */
+// http://localhost:8080/books
+router.get('/', 
+  utilities.handleErrors(bookController.getAllBooks));
 
-// Create Book
-router.post('/', 
-  bookValidate.bookRules(), 
-  bookValidate.bookValidation, 
-  bookController.createBook
+// http://localhost:8080/books/:id
+router.get('/:id', 
+  utilities.handleErrors(bookController.getBookById));
+
+/* ***************
+ * Create Book
+ *************** */
+router.post('/',
+  bookValidate.bookRules(),
+  bookValidate.bookValidation,
+  utilities.handleErrors(bookController.createBook)
 );
 
-// Update Book
+/* ***************
+ * Update Book
+ *************** */
 router.put('/:id',
   bookValidate.bookRules(),
   bookValidate.bookValidation,
-  bookController.updateBook
+  utilities.handleErrors(bookController.updateBook)
 );
 
-// Delete Book
-router.delete('/:id', bookController.deleteBook);
+/* ***************
+ * Delete Book
+ *************** */
+router.delete('/:id', 
+  utilities.handleErrors(bookController.deleteBook));
 
 module.exports = router;
