@@ -7,7 +7,10 @@
   },
   "host": "cse-341-project2-ij3n.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "http",
+    "https"
+  ],
   "paths": {
     "/": {
       "get": {
@@ -32,7 +35,9 @@
     "/books/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -57,10 +62,16 @@
                 "isbn": {
                   "example": "any"
                 },
-                "rating": {
+                "format": {
                   "example": "any"
                 },
-                "owned": {
+                "pages": {
+                  "example": "any"
+                },
+                "firstPublished": {
+                  "example": "any"
+                },
+                "genre": {
                   "example": "any"
                 }
               }
@@ -83,7 +94,9 @@
     "/books/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -122,10 +135,16 @@
                 "isbn": {
                   "example": "any"
                 },
-                "rating": {
+                "format": {
                   "example": "any"
                 },
-                "owned": {
+                "pages": {
+                  "example": "any"
+                },
+                "firstPublished": {
+                  "example": "any"
+                },
+                "genre": {
                   "example": "any"
                 }
               }
