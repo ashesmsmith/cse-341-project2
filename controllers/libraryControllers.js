@@ -1,9 +1,9 @@
 const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
-// Display All Books
-const getAllBooks = async (req, res) => {
-    const result = await mongodb.getDatabase().db().collection('books').find();
+// Display Library
+const getLibrary = async (req, res) => {
+    const result = await mongodb.getDatabase().db().collection('library').find();
 
     result.toArray().then((books) => {
         res.setHeader('Content-Type', 'application/json');
@@ -14,7 +14,7 @@ const getAllBooks = async (req, res) => {
 // Display Single Book by Id
 const getBookById = async (req, res) => {
     const bookId = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db().collection('books').find({ _id: bookId });
+    const result = await mongodb.getDatabase().db().collection('library').find({ _id: bookId });
 
     result.toArray().then((books) => {
         res.setHeader('Content-Type', 'application/json');
@@ -22,19 +22,21 @@ const getBookById = async (req, res) => {
     });
 };
 
-// Create Book
-const createBook = async (req, res) => {
+// Add Book to Library
+const addBook = async (req, res) => {
     const book = {
         title: req.body.title,
         author: req.body.author,
         isbn: req.body.isbn,
         format: req.body.format,
         pages: req.body.pages,
-        first_published: req.body.first_published,
-        genre: req.body.genre
+        status: req.body.status,
+        read_count: req.body.read_count,
+        rating: req.body.rating,
+        owned: req.body.owned
     };
 
-    const response = await mongodb.getDatabase().db().collection('books').insertOne(book);
+    const response = await mongodb.getDatabase().db().collection('library').insertOne(book);
 
     if (response.acknowledged) {
         res.status(204).json(response);
@@ -53,11 +55,17 @@ const updateBook = async (req, res) => {
         isbn: req.body.isbn,
         format: req.body.format,
         pages: req.body.pages,
-        first_published: req.body.first_published,
-        genre: req.body.genre
+        status: req.body.status,
+        read_count: req.body.read_count,
+        rating: req.body.rating,
+        owned: req.body.owned
     };
 
-    const response = await mongodb.getDatabase().db().collection('books').replaceOne({ _id: bookId }, book);
+    const response = await mongodb
+        .getDatabase()
+        .db()
+        .collection('library')
+        .replaceOne({ _id: bookId }, book);
 
     if (response.acknowledged) {
         res.status(204).send();
@@ -70,7 +78,11 @@ const updateBook = async (req, res) => {
 const deleteBook = async (req, res) => {
     const bookId = new ObjectId(req.params.id);
 
-    const response = await mongodb.getDatabase().db().collection('books').deleteOne({ _id: bookId });
+    const response = await mongodb
+        .getDatabase()
+        .db()
+        .collection('library')
+        .deleteOne({ _id: bookId });
 
     if (response.deletedCount > 0) {
         res.status(204).send();
@@ -79,4 +91,4 @@ const deleteBook = async (req, res) => {
     }
 };
 
-module.exports = { getAllBooks, getBookById, createBook, updateBook, deleteBook };
+module.exports = { getLibrary, getBookById, addBook, updateBook, deleteBook };

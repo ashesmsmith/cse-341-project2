@@ -1,184 +1,353 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "title": "Book API",
-    "description": "CSE 341 - Project 2 - Book API",
-    "version": "1.0.0"
-  },
-  "host": "cse-341-project2-ij3n.onrender.com",
-  "basePath": "/",
-  "schemes": ["https"],
-  "paths": {
-    "/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
+    "swagger": "2.0",
+    "info": {
+        "title": "Book API",
+        "description": "CSE 341 - Project 2 - Book API",
+        "version": "1.0.0"
     },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/books/": {
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "title": {
-                  "example": "any"
-                },
-                "author": {
-                  "example": "any"
-                },
-                "isbn": {
-                  "example": "any"
-                },
-                "format": {
-                  "example": "any"
-                },
-                "pages": {
-                  "example": "any"
-                },
-                "firstPublished": {
-                  "example": "any"
-                },
-                "genre": {
-                  "example": "any"
+    "host": "cse-341-project2-ij3n.onrender.com",
+    "basePath": "/",
+    "schemes": ["http", "https"],
+    "paths": {
+        "/login": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
                 }
-              }
             }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/books/{id}": {
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "title": {
-                  "example": "any"
-                },
-                "author": {
-                  "example": "any"
-                },
-                "isbn": {
-                  "example": "any"
-                },
-                "format": {
-                  "example": "any"
-                },
-                "pages": {
-                  "example": "any"
-                },
-                "firstPublished": {
-                  "example": "any"
-                },
-                "genre": {
-                  "example": "any"
+        },
+        "/logout": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
                 }
-              }
             }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+        },
+        "/": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api-docs": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/books/": {
+            "get": {
+                "description": "",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "example": "any"
+                                },
+                                "author": {
+                                    "example": "any"
+                                },
+                                "isbn": {
+                                    "example": "any"
+                                },
+                                "format": {
+                                    "example": "any"
+                                },
+                                "pages": {
+                                    "example": "any"
+                                },
+                                "first_published": {
+                                    "example": "any"
+                                },
+                                "genre": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/books/{id}": {
+            "get": {
+                "description": "",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "example": "any"
+                                },
+                                "author": {
+                                    "example": "any"
+                                },
+                                "isbn": {
+                                    "example": "any"
+                                },
+                                "format": {
+                                    "example": "any"
+                                },
+                                "pages": {
+                                    "example": "any"
+                                },
+                                "first_published": {
+                                    "example": "any"
+                                },
+                                "genre": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "delete": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/library/": {
+            "get": {
+                "description": "",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "example": "any"
+                                },
+                                "author": {
+                                    "example": "any"
+                                },
+                                "isbn": {
+                                    "example": "any"
+                                },
+                                "format": {
+                                    "example": "any"
+                                },
+                                "pages": {
+                                    "example": "any"
+                                },
+                                "status": {
+                                    "example": "any"
+                                },
+                                "read_count": {
+                                    "example": "any"
+                                },
+                                "rating": {
+                                    "example": "any"
+                                },
+                                "owned": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/library/{id}": {
+            "get": {
+                "description": "",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "example": "any"
+                                },
+                                "author": {
+                                    "example": "any"
+                                },
+                                "isbn": {
+                                    "example": "any"
+                                },
+                                "format": {
+                                    "example": "any"
+                                },
+                                "pages": {
+                                    "example": "any"
+                                },
+                                "status": {
+                                    "example": "any"
+                                },
+                                "read_count": {
+                                    "example": "any"
+                                },
+                                "rating": {
+                                    "example": "any"
+                                },
+                                "owned": {
+                                    "example": "any"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "delete": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
         }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
     }
-  }
 }

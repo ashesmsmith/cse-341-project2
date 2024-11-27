@@ -15,17 +15,17 @@ router.get('/:id', bookController.getBookById);
  * Create Book
  *************** */
 router.post('/',
-  bookValidate.bookRules(),
-  bookValidate.bookValidation,
-  bookController.createBook);
+    bookValidate.bookRules(),
+    bookValidate.bookValidation,
+    bookController.createBook);
 
 /* ***************
  * Update Book
  *************** */
 router.put('/:id',
-  bookValidate.bookRules(),
-  bookValidate.bookValidation,
-  bookController.updateBook);
+    bookValidate.bookRules(),
+    bookValidate.bookValidation,
+    bookController.updateBook);
 
 /* ***************
  * Delete Book

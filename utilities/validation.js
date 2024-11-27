@@ -2,7 +2,7 @@ const { body, validationResult } = require('express-validator');
 const validate = {};
 
 validate.bookRules = () => {
-  return [
+    return [
     body('title')
       .trim()
       .isString()
@@ -30,7 +30,7 @@ validate.bookRules = () => {
       .notEmpty()
       .withMessage('Please enter a valid number of pages.'),
 
-    body('firstPublished')
+    body('first_published')
       .trim()
       .notEmpty()
       .withMessage('Please enter a valid first published date.'),
@@ -39,23 +39,23 @@ validate.bookRules = () => {
       .trim()
       .notEmpty()
       .withMessage('Please enter a valid genre.')
-  ];
+    ];
 };
 
 validate.bookValidation = async (req, res, next) => {
-  let errors = [];
-  errors = validationResult(req);
+    let errors = [];
+    errors = validationResult(req);
 
-  if (errors.isEmpty()) {
-    return next();
-  }
+    if (errors.isEmpty()) {
+        return next();
+    }
 
-  const extractedErrors = [];
-  errors.array().map((err) => extractedErrors.push({ [err.param]: err.msg }));
+    const extractedErrors = [];
+    errors.array().map((err) => extractedErrors.push({ [err.param]: err.msg }));
 
-  return res.status(422).json({
-    errors: extractedErrors
-  });
+    return res.status(422).json({
+        errors: extractedErrors
+    });
 };
 
 module.exports = validate;

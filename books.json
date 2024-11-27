@@ -1,146 +1,146 @@
 [
-  {
-    "title": "A Court of Frost and Starlight",
-    "author": "Sarah J. Maas",
-    "isbn": "9781635575613",
-    "format": "hardcover",
-    "pages": 232,
-    "firstPublished": 2018,
-    "genre": ["fiction", "fantasy", "romance"]
-  },
-  {
-    "title": "A Court of Mist and Fury",
-    "author": "Sarah J. Maas",
-    "isbn": "9781635575576",
-    "format": "hardcover",
-    "pages": 626,
-    "firstPublished": 2016,
-    "genre": ["fiction", "fantasy", "romance"]
-  },
-  {
-    "title": "A Court of Silver Flames",
-    "author": "Sarah J. Maas",
-    "isbn": "9781681196282",
-    "format": "hardcover",
-    "pages": 751,
-    "firstPublished": 2021,
-    "genre": ["fiction", "fantasy", "romance"]
-  },
-  {
-    "title": "A Court of Thorns and Roses",
-    "author": "Sarah J. Maas",
-    "isbn": "9781635575552",
-    "format": "hardcover",
-    "pages": 419,
-    "firstPublished": 2015,
-    "genre": ["fiction", "fantasy", "romance"]
-  },
-  {
-    "title": "A Court of Wings and Ruin",
-    "author": "Sarah J. Maas",
-    "isbn": "9781635575590",
-    "format": "hardcover",
-    "pages": 703,
-    "firstPublished": 2017,
-    "genre": ["fiction", "fantasy", "romance"]
-  },
-  {
-    "title": "Crown of Midnight",
-    "author": "Sarah J. Maas",
-    "isbn": "9781639730964",
-    "format": "hardcover",
-    "pages": 420,
-    "firstPublished": 2013,
-    "genre": ["fiction", "fantasy"]
-  },
-  {
-    "title": "Empire of Storms",
-    "author": "Sarah J. Maas",
-    "isbn": "9781639731022",
-    "format": "hardcover",
-    "pages": 693,
-    "firstPublished": 2016,
-    "genre": ["fiction", "fantasy"]
-  },
-  {
-    "title": "Heir of Fire",
-    "author": "Sarah J. Maas",
-    "isbn": "9781639730988",
-    "format": "hardcover",
-    "pages": 565,
-    "firstPublished": 2014,
-    "genre": ["fiction", "fantasy"]
-  },
-  {
-    "title": "House of Earth and Blood",
-    "author": "Sarah J. Maas",
-    "isbn": "9781635574043",
-    "format": "hardcover",
-    "pages": 800,
-    "firstPublished": 2020,
-    "genre": ["fiction", "fantasy", "romance"]
-  },
-  {
-    "title": "House of Flame and Shadow",
-    "author": "Sarah J. Maas",
-    "isbn": "9781635574104",
-    "format": "hardcover",
-    "pages": 838,
-    "firstPublished": 2024,
-    "genre": ["fiction", "fantasy", "romance"]
-  },
-  {
-    "title": "House of Sky and Breath",
-    "author": "Sarah J. Maas",
-    "isbn": "9781635574074",
-    "format": "hardcover",
-    "pages": 805,
-    "firstPublished": 2022,
-    "genre": ["fiction", "fantasy", "romance"]
-  },
-  {
-    "title": "Kingdom of Ash",
-    "author": "Sarah J. Maas",
-    "isbn": "9781639731060",
-    "format": "hardcover",
-    "pages": 984,
-    "firstPublished": 2018,
-    "genre": ["fiction", "fantasy"]
-  },
-  {
-    "title": "Queen of Shadows",
-    "author": "Sarah J. Maas",
-    "isbn": "9781639731008",
-    "format": "hardcover",
-    "pages": 648,
-    "firstPublished": 2015,
-    "genre": ["fiction", "fantasy"]
-  },
-  {
-    "title": "The Assassin's Blade",
-    "author": "Sarah J. Maas",
-    "isbn": "9781639731084",
-    "format": "hardcover",
-    "pages": 435,
-    "firstPublished": 2014,
-    "genre": ["fiction", "fantasy"]
-  },
-  {
-    "title": "Throne of Glass",
-    "author": "Sarah J. Maas",
-    "isbn": "9781639730940",
-    "format": "hardcover",
-    "pages": 406,
-    "firstPublished": 2012,
-    "genre": ["fiction", "fantasy"]
-  },
-  {
-    "title": "Tower of Dawn",
-    "author": "Sarah J. Maas",
-    "isbn": "9781639731046",
-    "format": "hardcover",
-    "pages": 663,
-    "firstPublished": 2017,
-    "genre": ["fiction", "fantasy"]
-  }
+    {
+        "title": "A Court of Frost and Starlight",
+        "author": "Sarah J. Maas",
+        "isbn": "9781635575613",
+        "format": "hardcover",
+        "pages": 232,
+        "first_published": 2018,
+        "genre": ["fiction", "fantasy", "romance"]
+    },
+    {
+        "title": "A Court of Mist and Fury",
+        "author": "Sarah J. Maas",
+        "isbn": "9781635575576",
+        "format": "hardcover",
+        "pages": 626,
+        "first_published": 2016,
+        "genre": ["fiction", "fantasy", "romance"]
+    },
+    {
+        "title": "A Court of Silver Flames",
+        "author": "Sarah J. Maas",
+        "isbn": "9781681196282",
+        "format": "hardcover",
+        "pages": 751,
+        "first_published": 2021,
+        "genre": ["fiction", "fantasy", "romance"]
+    },
+    {
+        "title": "A Court of Thorns and Roses",
+        "author": "Sarah J. Maas",
+        "isbn": "9781635575552",
+        "format": "hardcover",
+        "pages": 419,
+        "first_published": 2015,
+        "genre": ["fiction", "fantasy", "romance"]
+    },
+    {
+        "title": "A Court of Wings and Ruin",
+        "author": "Sarah J. Maas",
+        "isbn": "9781635575590",
+        "format": "hardcover",
+        "pages": 703,
+        "first_published": 2017,
+        "genre": ["fiction", "fantasy", "romance"]
+    },
+    {
+        "title": "Crown of Midnight",
+        "author": "Sarah J. Maas",
+        "isbn": "9781639730964",
+        "format": "hardcover",
+        "pages": 420,
+        "first_published": 2013,
+        "genre": ["fiction", "fantasy"]
+    },
+    {
+        "title": "Empire of Storms",
+        "author": "Sarah J. Maas",
+        "isbn": "9781639731022",
+        "format": "hardcover",
+        "pages": 693,
+        "first_published": 2016,
+        "genre": ["fiction", "fantasy"]
+    },
+    {
+        "title": "Heir of Fire",
+        "author": "Sarah J. Maas",
+        "isbn": "9781639730988",
+        "format": "hardcover",
+        "pages": 565,
+        "first_published": 2014,
+        "genre": ["fiction", "fantasy"]
+    },
+    {
+        "title": "House of Earth and Blood",
+        "author": "Sarah J. Maas",
+        "isbn": "9781635574043",
+        "format": "hardcover",
+        "pages": 800,
+        "first_published": 2020,
+        "genre": ["fiction", "fantasy", "romance"]
+    },
+    {
+        "title": "House of Flame and Shadow",
+        "author": "Sarah J. Maas",
+        "isbn": "9781635574104",
+        "format": "hardcover",
+        "pages": 838,
+        "first_published": 2024,
+        "genre": ["fiction", "fantasy", "romance"]
+    },
+    {
+        "title": "House of Sky and Breath",
+        "author": "Sarah J. Maas",
+        "isbn": "9781635574074",
+        "format": "hardcover",
+        "pages": 805,
+        "first_published": 2022,
+        "genre": ["fiction", "fantasy", "romance"]
+    },
+    {
+        "title": "Kingdom of Ash",
+        "author": "Sarah J. Maas",
+        "isbn": "9781639731060",
+        "format": "hardcover",
+        "pages": 984,
+        "first_published": 2018,
+        "genre": ["fiction", "fantasy"]
+    },
+    {
+        "title": "Queen of Shadows",
+        "author": "Sarah J. Maas",
+        "isbn": "9781639731008",
+        "format": "hardcover",
+        "pages": 648,
+        "first_published": 2015,
+        "genre": ["fiction", "fantasy"]
+    },
+    {
+        "title": "The Assassin's Blade",
+        "author": "Sarah J. Maas",
+        "isbn": "9781639731084",
+        "format": "hardcover",
+        "pages": 435,
+        "first_published": 2014,
+        "genre": ["fiction", "fantasy"]
+    },
+    {
+        "title": "Throne of Glass",
+        "author": "Sarah J. Maas",
+        "isbn": "9781639730940",
+        "format": "hardcover",
+        "pages": 406,
+        "first_published": 2012,
+        "genre": ["fiction", "fantasy"]
+    },
+    {
+        "title": "Tower of Dawn",
+        "author": "Sarah J. Maas",
+        "isbn": "9781639731046",
+        "format": "hardcover",
+        "pages": 663,
+        "first_published": 2017,
+        "genre": ["fiction", "fantasy"]
+    }
 ]
