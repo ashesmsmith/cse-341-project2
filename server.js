@@ -10,36 +10,33 @@ const routes = require('./routes/index');
 
 const app = express();
 
-app.use(bodyParser.json());
+app
+    .use(bodyParser.json())
 
-app.use(
-    session({
+    .use(session({
         // express session initialization
         secret: 'secret', // name of the cookie
         resave: false,
         saveUninitialized: true
+    }))
+
+    .use(passport.initialize()) // init passport on every route call
+    .use(passport.session()) // allow passport to use express-session
+    
+    .use((req, res, next) => {
+        res.setHeader('Allow-Control-Allow-Origin', '*');
+        res.setHeader(
+            'Access-Control-Allow-Headers',
+            'Origin, X-Requested-Width, Content-Type, Accept, z-Key'
+        );
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        next();
     })
-);
 
-app.use(passport.initialize()); // init passport on every route call
+    .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
+    .use(cors({ origin: '*' }))
 
-app.use(passport.session()); // allow passport to use express-session
-
-app.use((req, res, next) => {
-    res.setHeader('Allow-Control-Allow-Origin', '*');
-    res.setHeader(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-Width, Content-Type, Accept, z-Key'
-    );
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    next();
-});
-
-app.use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}));
-
-app.use(cors({ origin: '*' }));
-
-app.use('/', routes);
+    .use('/', routes)
 
 passport.use(
     new GitHubStrategy(
@@ -95,7 +92,7 @@ process.on('uncaughtException', (err, origin) => {
  *************** */
 const port = process.env.PORT || 8080;
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
     if (err) {
         console.log(err);
     } else {

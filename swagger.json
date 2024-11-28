@@ -7,7 +7,7 @@
     },
     "host": "cse-341-project2-ij3n.onrender.com",
     "basePath": "/",
-    "schemes": ["https"],
+    "schemes": ["http","https"],
     "paths": {
         "/login": {
             "get": {
