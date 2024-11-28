@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-const session = require('express-session');
+// const session = require('express-session');
+const session = require('cookie-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 const cors = require('cors');
 const mongodb = require('./data/database');
@@ -14,7 +15,7 @@ app.use(bodyParser.json());
 app.use(
     session({
         // express session initialization
-        secret: 'secret', // name of cookie 'secret'
+        secret: 'secret', // name of the cookie
         resave: false,
         saveUninitialized: true
     })
@@ -34,7 +35,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }));
+app.use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}));
 
 app.use(cors({ origin: '*' }));
 
