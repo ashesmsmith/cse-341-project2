@@ -1,27 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const passport = require('passport');
-// const session = require('express-session');
-const session = require('cookie-session');
-const GitHubStrategy = require('passport-github2').Strategy;
-const cors = require('cors');
+const { auth, requiresAuth } = require('express-openid-connect');
 const mongodb = require('./data/database');
 const routes = require('./routes/index');
+require('dotenv').config();
 
 const app = express();
+const config = {
+    authRequired: false,
+    auth0Logout: true,
+    secret: process.env.SECRET,
+    baseURL: process.env.BASE_URL,
+    clientID: process.env.CLIENT_ID,
+    issuerBaseURL: process.env.ISSUER_BASE_URL
+};
 
 app
     .use(bodyParser.json())
 
-    .use(session({
-        // express session initialization
-        secret: 'secret', // name of the cookie
-        resave: false,
-        saveUninitialized: true
-    }))
-
-    .use(passport.initialize()) // init passport on every route call
-    .use(passport.session()) // allow passport to use express-session
+    // auth router attaches /login, /logout, and /callback routes to the baseURL
+    .use(auth(config))
     
     .use((req, res, next) => {
         res.setHeader('Allow-Control-Allow-Origin', '*');
@@ -33,52 +31,12 @@ app
         next();
     })
 
-    .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
-    .use(cors({ origin: '*' }))
-
     .use('/', routes)
 
-passport.use(
-    new GitHubStrategy(
-        {
-            clientID: process.env.GITHUB_CLIENT_ID,
-            clientSecret: process.env.GITHUB_CLIENT_SECRET,
-            callbackURL: process.env.CALLBACK_URL
-        },
-        function (accessToken, refreshToken, profile, done) {
-            //User.findOrCreate({ githubId: profile.id}, function(err, user) {
-            return done(null, profile);
-            //});
-        }
-    )
-);
-
-passport.serializeUser((user, done) => {
-    done(null, user);
+// Display user information if logged in
+app.get('/profile', requiresAuth(), (req, res) => {
+    res.send(JSON.stringify(req.oidc.user));
 });
-passport.deserializeUser((user, done) => {
-    done(null, user);
-});
-
-app.get('/', (req, res) => {
-    res.send(
-        req.session.user !== undefined
-            ? `Logged in as ${req.session.user.displayName}`
-            : 'Logged Out'
-    );
-});
-
-app.get(
-    '/github/callback',
-    passport.authenticate('github', {
-        failureRedirect: '/api-docs',
-        session: false
-    }),
-    (req, res) => {
-        req.session.user = req.user;
-        res.redirect('/');
-    }
-);
 
 /* ***************
  * ERROR HANDLING

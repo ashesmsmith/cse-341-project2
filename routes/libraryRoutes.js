@@ -1,29 +1,35 @@
 const router = require('express').Router();
 const libraryController = require('../controllers/libraryControllers');
-const isAuthenticated = require('../middleware/authenticate');
+const libraryValidate = require('../utilities/validation');
 
 /* ***************
  * Display Library
  *************** */
 // http://localhost:8080/library
-router.get('/', isAuthenticated, libraryController.getLibrary);
+router.get('/', libraryController.getLibrary);
 
 // http://localhost:8080/library/:id
-router.get('/:id', isAuthenticated, libraryController.getBookById);
+router.get('/:id', libraryController.getBookById);
 
 /* ***************
  * Add Book to Library
  *************** */
-router.post('/', isAuthenticated, libraryController.addBook);
+router.post('/', 
+    libraryValidate.libraryRules(),
+    libraryValidate.validation,
+    libraryController.addBook);
 
 /* ***************
  * Update Book in Library
  *************** */
-router.put('/:id', isAuthenticated, libraryController.updateBook);
+router.put('/:id', 
+    libraryValidate.libraryRules(),
+    libraryValidate.validation,
+    libraryController.updateBook);
 
 /* ***************
  * Delete Book from Library
  *************** */
-router.delete('/:id', isAuthenticated, libraryController.deleteBook);
+router.delete('/:id', libraryController.deleteBook);
 
 module.exports = router;

@@ -16,7 +16,7 @@ router.get('/:id', bookController.getBookById);
  *************** */
 router.post('/',
     bookValidate.bookRules(),
-    bookValidate.bookValidation,
+    bookValidate.validation,
     bookController.createBook);
 
 /* ***************
@@ -24,7 +24,7 @@ router.post('/',
  *************** */
 router.put('/:id',
     bookValidate.bookRules(),
-    bookValidate.bookValidation,
+    bookValidate.validation,
     bookController.updateBook);
 
 /* ***************

@@ -19,7 +19,7 @@ Content-Type: application/json
     "isbn": "0123456789",
     "format": "fake",
     "pages": 1,
-    "firstPublished": 1,
+    "first_published": 1,
     "genre": ["none"]
 }
 
@@ -34,7 +34,7 @@ Content-Type: application/json
     "isbn": "9876543210",
     "format": "veryFake",
     "pages": 1,
-    "firstPublished": 2,
+    "first_published": 2,
     "genre": ["none", "done"]
 }
 
@@ -64,7 +64,7 @@ Content-Type: application/json
     "isbn": "0123456789",
     "format": "fake",
     "pages": 1,
-    "firstPublished": 1,
+    "first_published": 1,
     "genre": ["none"]
 }
 
@@ -79,7 +79,7 @@ Content-Type: application/json
     "isbn": "9876543210",
     "format": "veryFake",
     "pages": 1,
-    "firstPublished": 2,
+    "first_published": 2,
     "genre": ["none", "done"]
 }
 
