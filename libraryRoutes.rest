@@ -1,0 +1,89 @@
+// LOCALHOST
+
+### GET - Display All books in Library - requires login
+GET http://localhost:8080/library
+
+### GET - Display Book by Id from library - requires login
+GET http://localhost:8080/library/67477e3c74a6fc1e49748555
+
+### POST - Add Book to library - requires login
+POST http://localhost:8080/library HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Delete Me",
+    "author": "Testing",
+    "isbn": "0123456789",
+    "format": "fake",
+    "pages": 1,
+    "status": "Read",
+    "read_count": 2,
+    "rating": 4,
+    "owned": "Yes"
+}
+
+### PUT - Update Book in library - requires login
+### When testing add Delete Me book above first then update id in URL below
+PUT http://localhost:8080/library/6740c538c6fa8397205a72f9 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Still Delete Me",
+    "author": "Still Testing",
+    "isbn": "9876543210",
+    "format": "veryFake",
+    "pages": 1,
+    "status": "Read",
+    "read_count": 2,
+    "rating": 4,
+    "owned": "Yes"
+}
+
+### DELETE - Delete Book from library - requires login
+### When testing add Delete Me book above first then update id in URL below
+DELETE http://localhost:8080/library/6740c538c6fa8397205a72f9 HTTP/1.1
+
+// PRODUCTION
+
+### GET - Display All books in Library - requires login
+GET https://cse-341-project2-ij3n.onrender.com/library
+
+### GET - Display Book by Id from library - requires login
+GET https://cse-341-project2-ij3n.onrender.com/library/67477e3c74a6fc1e49748555
+
+### POST - Add Book to library - requires login
+POST https://cse-341-project2-ij3n.onrender.com/library HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Delete Me",
+    "author": "Testing",
+    "isbn": "0123456789",
+    "format": "fake",
+    "pages": 1,
+    "status": "Read",
+    "read_count": 2,
+    "rating": 4,
+    "owned": "Yes"
+}
+
+### PUT - Update Book in library - requires login
+### When testing add Delete Me book above first then update id in URL below
+PUT https://cse-341-project2-ij3n.onrender.com/library/6740c538c6fa8397205a72f9 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Still Delete Me",
+    "author": "Still Testing",
+    "isbn": "9876543210",
+    "format": "veryFake",
+    "pages": 1,
+    "status": "Read",
+    "read_count": 2,
+    "rating": 4,
+    "owned": "Yes"
+}
+
+### DELETE - Delete Book from library - requires login
+### When testing add Delete Me book above first then update id in URL below
+DELETE https://cse-341-project2-ij3n.onrender.com/library/6740c538c6fa8397205a72f9 HTTP/1.1

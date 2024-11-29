@@ -6,7 +6,7 @@ GET http://localhost:8080/
 ### GET - Display All Books
 GET http://localhost:8080/books
 
-### GET - Display Book by Id (A Court of Thorns and Roses)
+### GET - Display Book by Id
 GET http://localhost:8080/books/67477e3c74a6fc1e49748555
 
 ### POST - Create Book
@@ -41,6 +41,7 @@ Content-Type: application/json
 ### DELETE - Delete Book
 ### When testing add Delete Me book above first then update id in URL below
 DELETE http://localhost:8080/books/6740c538c6fa8397205a72f9 HTTP/1.1
+
 
 
 // PRODUCTION
