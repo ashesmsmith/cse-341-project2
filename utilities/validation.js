@@ -24,7 +24,7 @@ validate.bookRules = () => {
       .trim()
       .notEmpty()
       .isString()
-      .isIn('Paperback', 'Hardcover', 'Digital')
+      .isIn(['Paperback', 'Hardcover', 'Digital'])
       .withMessage('Please enter a valid format.'),
 
     body('pages')
@@ -68,7 +68,7 @@ validate.libraryRules = () => {
     .trim()
     .notEmpty()
     .isString()
-    .isIn('Paperback', 'Hardcover', 'Digital')
+    .isIn(['Paperback', 'Hardcover', 'Digital'])
     .withMessage('Please enter a valid format.'),
 
   body('pages')
@@ -80,7 +80,7 @@ validate.libraryRules = () => {
   body('status')
     .trim()
     .notEmpty()
-    .isIn('Read', 'TBR')
+    .isIn(['Read', 'To Read', 'Reading'])
     .withMessage('Please enter a valid status.'),
 
   body('read_count')
@@ -98,8 +98,8 @@ validate.libraryRules = () => {
   body('owned')
     .trim()
     .notEmpty()
-    .toInt()
-    .withMessage('Please enter a valid owned.')
+    .toBoolean()
+    .withMessage('Please enter true or false for owned.')
   ];
 };
 

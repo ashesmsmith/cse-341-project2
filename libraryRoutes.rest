@@ -14,12 +14,12 @@ Content-Type: application/json
     "title": "Delete Me",
     "author": "Testing",
     "isbn": "0123456789",
-    "format": "fake",
-    "pages": 1,
+    "format": "Paperback",
+    "pages": 100,
     "status": "Read",
-    "read_count": 2,
-    "rating": 4,
-    "owned": "Yes"
+    "read_count": 1,
+    "rating": 3,
+    "owned": false
 }
 
 ### PUT - Update Book in library - requires login
@@ -31,12 +31,12 @@ Content-Type: application/json
     "title": "Still Delete Me",
     "author": "Still Testing",
     "isbn": "9876543210",
-    "format": "veryFake",
-    "pages": 1,
+    "format": "Hardcover",
+    "pages": 1000,
     "status": "Read",
     "read_count": 2,
     "rating": 4,
-    "owned": "Yes"
+    "owned": true
 }
 
 ### DELETE - Delete Book from library - requires login
@@ -59,12 +59,12 @@ Content-Type: application/json
     "title": "Delete Me",
     "author": "Testing",
     "isbn": "0123456789",
-    "format": "fake",
-    "pages": 1,
+    "format": "Paperback",
+    "pages": 100,
     "status": "Read",
-    "read_count": 2,
-    "rating": 4,
-    "owned": "Yes"
+    "read_count": 1,
+    "rating": 3,
+    "owned": false
 }
 
 ### PUT - Update Book in library - requires login
@@ -76,12 +76,12 @@ Content-Type: application/json
     "title": "Still Delete Me",
     "author": "Still Testing",
     "isbn": "9876543210",
-    "format": "veryFake",
-    "pages": 1,
+    "format": "Hardcover",
+    "pages": 1000,
     "status": "Read",
     "read_count": 2,
     "rating": 4,
-    "owned": "Yes"
+    "owned": true
 }
 
 ### DELETE - Delete Book from library - requires login

@@ -7,7 +7,7 @@ GET http://localhost:8080/
 GET http://localhost:8080/books
 
 ### GET - Display Book by Id
-GET http://localhost:8080/books/67477e3c74a6fc1e49748555
+GET http://localhost:8080/books/67477e3c74a6fc1e49748552
 
 ### POST - Create Book
 POST http://localhost:8080/books HTTP/1.1
@@ -17,9 +17,9 @@ Content-Type: application/json
     "title": "Delete Me",
     "author": "Testing",
     "isbn": "0123456789",
-    "format": "fake",
-    "pages": 1,
-    "first_published": 1,
+    "format": "Paperback",
+    "pages": 100,
+    "first_published": 2010,
     "genre": ["none"]
 }
 
@@ -32,9 +32,9 @@ Content-Type: application/json
     "title": "Still Delete Me",
     "author": "Still Testing",
     "isbn": "9876543210",
-    "format": "veryFake",
-    "pages": 1,
-    "first_published": 2,
+    "format": "Hardcover",
+    "pages": 1000,
+    "first_published": 2020,
     "genre": ["none", "done"]
 }
 
@@ -63,9 +63,9 @@ Content-Type: application/json
     "title": "Delete Me",
     "author": "Testing",
     "isbn": "0123456789",
-    "format": "fake",
-    "pages": 1,
-    "first_published": 1,
+    "format": "Paperback",
+    "pages": 100,
+    "first_published": 2010,
     "genre": ["none"]
 }
 
@@ -78,9 +78,9 @@ Content-Type: application/json
     "title": "Still Delete Me",
     "author": "Still Testing",
     "isbn": "9876543210",
-    "format": "veryFake",
-    "pages": 1,
-    "first_published": 2,
+    "format": "Hardcover",
+    "pages": 1000,
+    "first_published": 2020,
     "genre": ["none", "done"]
 }
 
