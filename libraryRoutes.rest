@@ -1,10 +1,13 @@
 // LOCALHOST
 
+### GET - Login
+GET http://localhost:8080/login
+
 ### GET - Display All books in Library - requires login
 GET http://localhost:8080/library
 
 ### GET - Display Book by Id from library - requires login
-GET http://localhost:8080/library/67477e3c74a6fc1e49748555
+GET http://localhost:8080/library/67477e4b74a6fc1e49748562
 
 ### POST - Add Book to library - requires login
 POST http://localhost:8080/library HTTP/1.1
